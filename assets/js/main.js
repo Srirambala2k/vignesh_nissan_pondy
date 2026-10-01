@@ -39,8 +39,20 @@
   $("#visitBtns").innerHTML =
     '<a class="btn btn-red" target="_blank" rel="noopener" href="' + esc(S.mapLink) + '">Get Directions</a>' +
     S.phones.map(function (p) { return '<a class="btn btn-ghost" href="tel:' + p.replace(/\s/g, "") + '">' + esc(p) + "</a>"; }).join("");
-  $("#social").innerHTML = [["Instagram", S.instagram], ["Facebook", S.facebook], ["YouTube", S.youtube]]
-    .map(function (s) { return '<a target="_blank" rel="noopener" href="' + esc(s[1]) + '">' + s[0] + "</a>"; }).join("");
+  /* social icon row: Facebook, YouTube, X/Twitter, LinkedIn, Instagram, Google Maps */
+  var ICONS = {
+    Facebook: "M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z",
+    YouTube: "M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.7 2 12 2 12s0 3.3.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.7 19 12 19 12 19s6.3 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.8.4-4.8s0-3.3-.4-4.8zM10 15V9l5.2 3L10 15z",
+    Twitter: "M18.2 2.5h3.3l-7.2 8.3 8.5 11.2h-6.6l-5.2-6.8-6 6.8H1.7l7.7-8.8L1.3 2.5H8l4.7 6.2 5.5-6.2zm-1.2 17.5h1.8L7.1 4.3H5.2L17 20z",
+    LinkedIn: "M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z",
+    Instagram: "M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.5 6a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z",
+    Google: "M12.2 10.8v3.4h4.8c-.2 1.2-1.5 3.5-4.8 3.5a5.3 5.3 0 0 1 0-10.6c1.7 0 2.8.7 3.4 1.3l2.3-2.2A8.5 8.5 0 0 0 12.2 4a8.5 8.5 0 1 0 0 17c4.9 0 8.1-3.4 8.1-8.3 0-.6-.1-1-.1-1.4h-8z"
+  };
+  var socialHTML = [["Facebook", S.facebook, "Facebook"], ["YouTube", S.youtube, "YouTube"], ["Twitter", S.twitter, "Twitter / X"], ["LinkedIn", S.linkedin, "LinkedIn"], ["Instagram", S.instagram, "Instagram"], ["Google", S.mapLink, "Find us on Google Maps"]]
+    .filter(function (s) { return s[1]; })
+    .map(function (s) { return '<a class="soc ' + s[0].toLowerCase() + '" target="_blank" rel="noopener" href="' + esc(s[1]) + '" aria-label="' + esc(s[2]) + '" title="' + esc(s[2]) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="' + ICONS[s[0]] + '"/></svg></a>'; }).join("");
+  $("#social").innerHTML = socialHTML;
+  $("#visitSocial").innerHTML = socialHTML;
 
   /* ---------- open now badge (IST) ---------- */
   function updateOpen() {

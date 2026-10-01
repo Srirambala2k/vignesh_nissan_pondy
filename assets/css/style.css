@@ -572,3 +572,13 @@ body{background:var(--bg)}
 .nav-in{padding-top:8px;padding-bottom:8px}
 @media(max-width:960px){.brand img{height:42px}}
 @media(max-width:640px){.brand img{height:36px}}
+
+/* social icon row */
+.social{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.social a.soc{width:46px;height:46px;padding:0;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--fg);transition:transform .3s var(--ease),background .25s,color .25s,border-color .25s,box-shadow .25s}
+.social a.soc svg{width:22px;height:22px}
+.social a.soc:hover,.social a.soc:focus-visible{transform:translateY(-3px);color:#fff;border-color:transparent;box-shadow:0 8px 20px rgba(20,24,32,.2)}
+.social a.facebook:hover{background:#1877f2}.social a.youtube:hover{background:#ff0000}.social a.twitter:hover{background:#111}
+.social a.linkedin:hover{background:#0a66c2}.social a.instagram:hover{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}.social a.google:hover{background:var(--red)}
+.social a.soc:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.follow{margin:18px 0 8px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}

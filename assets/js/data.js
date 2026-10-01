@@ -14,6 +14,8 @@ window.SITE = {
   instagram: "https://www.instagram.com/vignesh.nissan/",
   facebook: "https://www.facebook.com/VigneshNissan",
   youtube: "https://www.youtube.com/channel/UCFKA8_JgrQNEDb7luTmgn9Q",
+  twitter: "https://twitter.com/VigneshMoteurx",
+  linkedin: "https://www.linkedin.com/company/69943655",
   mapLink: "https://www.google.com/maps/place/Vignesh+Nissan/@11.9449526,79.8093858,17z",
   mapEmbed: "https://maps.google.com/maps?q=11.9449526,79.8093858&z=16&output=embed",
   // Optional: free key from web3forms.com so enquiries also arrive by email
