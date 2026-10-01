@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vignesh Nissan Puducherry | Tekton, Magnite, Gravite – Test Drive & Price</title>
+<meta name="description" content="Vignesh Nissan, ECR Puducherry. Explore the new Nissan Tekton, Magnite and Gravite. Book a test drive, get on-road price, EMI quote and service on WhatsApp.">
+<meta name="theme-color" content="#f2f3f5">
+<meta property="og:title" content="Vignesh Nissan Puducherry">
+<meta property="og:description" content="New Tekton, Magnite & Gravite. Book a test drive today.">
+<meta property="og:image" content="assets/images/og-image.jpg">
+<link rel="icon" href="assets/images/vignesh-logo-red.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1790845204">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoDealer","name":"Vignesh Nissan","telephone":"+91 84899 44191",
+"address":{"@type":"PostalAddress","streetAddress":"#10-A Vignesh Towers, ECR, Near Kokku Park","addressLocality":"Puducherry","addressCountry":"IN"},
+"geo":{"@type":"GeoCoordinates","latitude":11.9449526,"longitude":79.8093858},"brand":"Nissan"}
+</script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in glass">
+    <a href="#home" class="brand" aria-label="Vignesh Nissan home"><img src="assets/images/vignesh-nissan-logo.png" alt="Vignesh Nissan" width="200" height="40"></a>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#models">Models</a>
+      <a href="#variants">Variants</a>
+      <a href="#offers">Offers</a>
+      <a href="#emi">EMI</a>
+      <a href="#compare">Compare</a>
+      <a href="#service">Service</a>
+      <a href="#visit">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="open-badge" id="openBadge"></span>
+      <button class="btn btn-red sm" data-enquire>Book Test Drive</button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/images/hero-poster.jpg" id="heroVideo">
+    <source src="assets/videos/hero.webm" type="video/webm">
+    <source src="assets/videos/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <span class="pill"><i class="dot"></i>New Launch · Nissan Tekton</span>
+      <h1 aria-label="Drive the Bold New Nissan in Puducherry">
+        <span class="w" style="--i:0">Drive</span> <span class="w" style="--i:1">the</span> <span class="w hot" style="--i:2"><em>Bold</em></span><br>
+        <span class="w hot" style="--i:3"><em>New</em></span> <span class="w" style="--i:4">Nissan</span> <span class="w" style="--i:5">in</span><br>
+        <span class="w" style="--i:6">Puducherry</span>
+      </h1>
+      <p class="lead">Tekton, Magnite &amp; Gravite. Test drives, best on-road price and easy finance, all from your local Nissan family.</p>
+      <div class="hero-btns">
+        <button class="btn btn-red btn-pulse" data-enquire data-purpose="Test Drive">Book a Test Drive <span class="arr">→</span></button>
+        <button class="btn btn-ghost" data-enquire data-purpose="On-Road Price">Get On-Road Price</button>
+      </div>
+      <ul class="hero-stats">
+        <li><b data-count="3">3</b><span>Current models</span></li>
+        <li><b>ECR</b><span>Puducherry showroom</span></li>
+        <li><b><span data-count="7">7</span> days</b><span>Open every day</span></li>
+      </ul>
+    </div>
+  </div>
+  <a href="#models" class="scroll-cue" aria-label="Scroll down"><i></i></a>
+</section>
+
+<main>
+<!-- Models -->
+<section class="sec models" id="models">
+  <div class="wrap">
+    <div class="head reveal"><span class="eyebrow">Our Showroom</span><h2>Choose Your <em>Nissan</em></h2><p>Tap a car to see mileage, specs and variant prices.</p></div>
+  </div>
+  <div class="panels" id="modelCards"></div>
+</section>
+
+<!-- Variants -->
+<section class="sec dark" id="variants">
+  <div class="wrap">
+    <div class="head reveal"><span class="eyebrow">Variants &amp; Prices</span><h2>Find Your <em>Perfect Variant</em></h2></div>
+    <div class="tabs" id="variantTabs" role="tablist"></div>
+    <div class="var-grid reveal">
+      <div class="var-visual glass" id="varVisual"></div>
+      <div class="var-table glass" id="varTable"></div>
+    </div>
+    <p class="note">Ex-showroom prices shown are indicative. Call or WhatsApp for the latest on-road price.</p>
+  </div>
+</section>
+
+<!-- Colours -->
+<section class="sec" id="colours">
+  <div class="wrap col-wrap">
+    <div class="head reveal left"><span class="eyebrow">Colours</span><h2>Pick Your <em>Colour</em></h2><p id="colName">Select a colour</p>
+      <div class="swatches" id="swatches"></div>
+      <div class="col-model" id="colModel"></div>
+    </div>
+    <div class="col-stage glass reveal" id="colStage"></div>
+  </div>
+</section>
+
+<!-- Offers -->
+<section class="sec dark" id="offers">
+  <div class="wrap">
+    <div class="head reveal"><span class="eyebrow">Offers</span><h2>Current <em>Offers</em></h2></div>
+    <div class="offers" id="offerCards"></div>
+  </div>
+</section>
+
+<!-- EMI -->
+<section class="sec dark" id="emi">
+  <div class="wrap emi-wrap">
+    <div class="head reveal left"><span class="eyebrow">Finance</span><h2>EMI <em>Calculator</em></h2><p>Plan your purchase in seconds, then send the quote to us on WhatsApp.</p></div>
+    <div class="emi glass reveal">
+      <label>Model
+        <select id="emiModel"></select></label>
+      <label>Vehicle price (₹) <input type="number" id="emiPrice" min="100000" step="10000"></label>
+      <label>Down payment <output id="emiDownOut"></output>
+        <input type="range" id="emiDown" min="0" max="60" value="20"></label>
+      <label>Tenure <output id="emiTenOut"></output>
+        <input type="range" id="emiTen" min="1" max="7" value="5"></label>
+      <label>Interest rate % p.a. <output id="emiRateOut"></output>
+        <input type="range" id="emiRate" min="7" max="15" step="0.25" value="9.5"></label>
+      <div class="emi-result">
+        <span>Estimated monthly EMI</span>
+        <strong id="emiOut">₹0</strong>
+        <small id="emiSub"></small>
+      </div>
+      <a class="btn btn-wa" id="emiWa" target="_blank" rel="noopener">Send this quote on WhatsApp</a>
+      <p class="note">Indicative only. Actual rate depends on bank approval.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Compare -->
+<section class="sec" id="compare">
+  <div class="wrap">
+    <div class="head reveal"><span class="eyebrow">Compare</span><h2>Compare <em>All Models</em></h2><p>Every current Nissan side by side.</p></div>
+    <div class="cmp glass reveal">
+      <div id="cmpTable"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why us -->
+<section class="sec dark" id="why">
+  <div class="wrap">
+    <div class="head reveal"><span class="eyebrow">Why Vignesh Nissan</span><h2>Your Trusted <em>Nissan Partner</em></h2></div>
+    <div class="why">
+      <div class="glass reveal"><i>🚗</i><h3>Free Test Drive</h3><p>Book online and we bring the car to you or meet you at the showroom.</p></div>
+      <div class="glass reveal"><i>💰</i><h3>Transparent Pricing</h3><p>Clear on-road price with no surprises. Ask us on WhatsApp for a quote.</p></div>
+      <div class="glass reveal"><i>🔧</i><h3>Genuine Service</h3><p>Nissan-trained technicians and genuine parts for your car.</p></div>
+      <div class="glass reveal"><i>🔁</i><h3>Exchange &amp; Finance</h3><p>Best value for your old car and quick loan assistance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Service -->
+<section class="sec" id="service">
+  <div class="wrap svc">
+    <div class="head reveal left"><span class="eyebrow">Service</span><h2>Book a <em>Service</em></h2><p>Regular service, repairs, accessories and free pick-up assistance. Tell us your car and we will confirm a slot.</p></div>
+    <form class="glass svc-form reveal" id="svcForm" novalidate>
+      <input name="name" placeholder="Your name" required autocomplete="name">
+      <input name="phone" placeholder="Mobile number" inputmode="numeric" maxlength="10" required autocomplete="tel">
+      <input name="reg" placeholder="Vehicle model / registration no.">
+      <select name="type"><option>General Service</option><option>Repair</option><option>Accessories</option><option>Other</option></select>
+      <button class="btn btn-red" type="submit">Request Service on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="sec dark" id="testimonials">
+  <div class="wrap">
+    <div class="head reveal"><span class="eyebrow">Happy Customers</span><h2>What Our <em>Customers Say</em></h2></div>
+    <div class="testis" id="testis"></div>
+  </div>
+</section>
+
+<!-- Visit -->
+<section class="sec" id="visit">
+  <div class="wrap visit">
+    <div class="glass visit-info reveal">
+      <span class="eyebrow">Visit Us</span>
+      <h2>Vignesh <em>Nissan</em></h2>
+      <p id="addr"></p>
+      <p><b>Hours:</b> Mon–Sat 9 AM – 9 PM · Sun 10 AM – 8 PM</p>
+      <div class="open-badge big" id="openBadge2"></div>
+      <div class="visit-btns" id="visitBtns"></div>
+    </div>
+    <div class="map reveal"><iframe id="mapFrame" title="Vignesh Nissan location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div><img src="assets/images/vignesh-nissan-logo.png" alt="Vignesh Nissan" class="flogo" width="240" height="48"><p>Authorised Nissan dealer, ECR Puducherry.</p></div>
+    <div class="flinks"><a href="#models">Models</a><a href="#offers">Offers</a><a href="#emi">EMI</a><a href="#service">Service</a><a href="#visit">Contact</a></div>
+    <div class="social" id="social"></div>
+  </div>
+  <p class="copy">© <span id="yr"></span> Vignesh Nissan. Prices are indicative, ex-showroom. Nissan and its logo are trademarks of Nissan Motor Co., Ltd.</p>
+</footer>
+
+<!-- Car detail page -->
+<div class="detail" id="detail" aria-hidden="true"></div>
+
+<!-- Floating dock -->
+<div class="dock" id="dock">
+  <a class="dk wa" id="dkWa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4Z"/></svg><span>WhatsApp</span></a>
+  <a class="dk ig" id="dkIg" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.5 6a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg><span>Instagram</span></a>
+  <a class="dk call" id="dkCall" aria-label="Call"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/></svg><span>Call</span></a>
+</div>
+
+<!-- Sticky mobile bar -->
+<div class="mbar">
+  <button class="btn btn-red" data-enquire>Enquire Now</button>
+  <a class="btn btn-wa" id="mbWa" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<!-- Enquiry popup -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <form class="modal-box glass" id="enqForm" role="dialog" aria-modal="true" aria-labelledby="mTitle" novalidate>
+    <button type="button" class="x" data-close aria-label="Close">×</button>
+    <span class="pill">Vignesh Nissan</span>
+    <h3 id="mTitle">Book Your Test Drive</h3>
+    <p class="sub">Share your details and our team will contact you shortly.</p>
+    <label>Name <input name="name" required autocomplete="name" placeholder="Your full name"></label>
+    <label>Mobile number <input name="phone" required inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="10-digit mobile"></label>
+    <div class="row2">
+      <label>Model <select name="model" id="fModel" required></select></label>
+      <label>Variant <select name="variant" id="fVariant"></select></label>
+    </div>
+    <div class="radios" id="fPurpose">
+      <label><input type="radio" name="purpose" value="Test Drive" checked><span>Test Drive</span></label>
+      <label><input type="radio" name="purpose" value="On-Road Price"><span>On-Road Price</span></label>
+      <label><input type="radio" name="purpose" value="Exchange"><span>Exchange</span></label>
+    </div>
+    <p class="err" id="fErr" role="alert"></p>
+    <button class="btn btn-red block" type="submit">Submit &amp; Chat on WhatsApp</button>
+    <p class="tiny">By submitting you agree to be contacted by Vignesh Nissan.</p>
+  </form>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="assets/js/data.js?v=1790840790008"></script>
+<script src="assets/js/tekton-data.js?v=1790840790008"></script>
+<script src="assets/js/gravite-data.js?v=1790840790008"></script>
+<script src="assets/js/magnite-data.js?v=1790840790008"></script>
+<script src="assets/js/main.js?v=1790845175204"></script>
+</body>
+</html>
