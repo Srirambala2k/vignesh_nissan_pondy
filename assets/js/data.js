@@ -19,7 +19,7 @@ window.SITE = {
     { id: "villupuram", name: "Villupuram", address: "53/5, Gingee Main Road, Kamalanagar, Villupuram – 605602 (Opposite Sri Jayeandra Saraswati Vidyaalayaa School)", phones: ["+91 84899 44191"], hours: false },
     { id: "cuddalore", name: "Cuddalore", address: "8, Imperial Rd, Sellankuppam, Cuddalore, Tamil Nadu 607003", phones: ["+91 84899 44191"], hours: false }
   ],
-  instagram: "https://www.instagram.com/vignesh.nissan/",
+  instagram: "https://www.instagram.com/vignesh_nissan",
   facebook: "https://www.facebook.com/VigneshNissan",
   youtube: "https://www.youtube.com/channel/UCFKA8_JgrQNEDb7luTmgn9Q",
   twitter: "https://twitter.com/VigneshMoteurx",
