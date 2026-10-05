@@ -13,11 +13,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=1790845714359">
+<link rel="stylesheet" href="assets/css/style.css?v=1791192389616">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AutoDealer","name":"Vignesh Nissan","telephone":"+91 84899 44191",
-"address":{"@type":"PostalAddress","streetAddress":"#10-A Vignesh Towers, ECR, Near Kokku Park","addressLocality":"Puducherry","addressCountry":"IN"},
-"geo":{"@type":"GeoCoordinates","latitude":11.9449526,"longitude":79.8093858},"brand":"Nissan"}
+{"@context":"https://schema.org","@graph":[{"@type":"AutoDealer","name":"Vignesh Nissan Puducherry","telephone":"+91 84899 44191","brand":"Nissan","address":{"@type":"PostalAddress","streetAddress":"10, Vignesh Towers, East Coast Rd, Pakkamudayanpet, Lawspet","addressLocality":"Puducherry","postalCode":"605008","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":11.9449526,"longitude":79.8093858}},{"@type":"AutoDealer","name":"Vignesh Nissan Villupuram","telephone":"+91 84899 44191","brand":"Nissan","address":{"@type":"PostalAddress","streetAddress":"53/5, Gingee Main Road, Kamalanagar","addressLocality":"Villupuram","postalCode":"605602","addressRegion":"Tamil Nadu","addressCountry":"IN"}},{"@type":"AutoDealer","name":"Vignesh Nissan Cuddalore","telephone":"+91 84899 44191","brand":"Nissan","address":{"@type":"PostalAddress","streetAddress":"8, Imperial Rd, Sellankuppam","addressLocality":"Cuddalore","postalCode":"607003","addressRegion":"Tamil Nadu","addressCountry":"IN"}}]}
 </script>
 </head>
 <body>
@@ -66,7 +64,7 @@
       </div>
       <ul class="hero-stats">
         <li><b data-count="3">3</b><span>Current models</span></li>
-        <li><b>ECR</b><span>Puducherry showroom</span></li>
+        <li><b>3</b><span>Showrooms</span></li>
         <li><b><span data-count="7">7</span> days</b><span>Open every day</span></li>
       </ul>
     </div>
@@ -166,7 +164,8 @@
 <!-- Service -->
 <section class="sec" id="service">
   <div class="wrap svc">
-    <div class="head reveal left"><span class="eyebrow">Service</span><h2>Book a <em>Service</em></h2><p>Regular service, repairs, accessories and free pick-up assistance. Tell us your car and we will confirm a slot.</p></div>
+    <div class="head reveal left"><span class="eyebrow">Service</span><h2>Book a <em>Service</em></h2><p>Regular service, repairs, accessories and free pick-up assistance. Tell us your car and we will confirm a slot.</p>
+      <a class="btn btn-wa" id="svcWa" target="_blank" rel="noopener" style="margin-top:18px">Chat with Service on WhatsApp</a></div>
     <form class="glass svc-form reveal" id="svcForm" novalidate>
       <input name="name" placeholder="Your name" required autocomplete="name">
       <input name="phone" placeholder="Mobile number" inputmode="numeric" maxlength="10" required autocomplete="tel">
@@ -191,8 +190,9 @@
     <div class="glass visit-info reveal">
       <span class="eyebrow">Visit Us</span>
       <h2>Vignesh <em>Nissan</em></h2>
+      <div class="loc-tabs" id="locTabs" role="tablist" aria-label="Showroom location"></div>
       <p id="addr"></p>
-      <p><b>Hours:</b> Mon–Sat 9 AM – 9 PM · Sun 10 AM – 8 PM</p>
+      <p id="hoursLine"></p>
       <div class="open-badge big" id="openBadge2"></div>
       <div class="visit-btns" id="visitBtns"></div>
       <p class="follow">Follow us</p>
@@ -205,7 +205,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <div><img src="assets/images/vignesh-nissan-logo.png" alt="Vignesh Nissan" class="flogo" width="240" height="48"><p>Authorised Nissan dealer, ECR Puducherry.</p></div>
+    <div><img src="assets/images/vignesh-nissan-logo.png" alt="Vignesh Nissan" class="flogo" width="240" height="48"><p>Authorised Nissan dealer. Puducherry · Villupuram · Cuddalore.</p></div>
     <div class="flinks"><a href="#models">Models</a><a href="#offers">Offers</a><a href="#emi">EMI</a><a href="#service">Service</a><a href="#visit">Contact</a></div>
     <div class="social" id="social"></div>
   </div>
@@ -254,10 +254,10 @@
 </div>
 <div class="toast" id="toast" role="status"></div>
 
-<script src="assets/js/data.js?v=1790845714359"></script>
+<script src="assets/js/data.js?v=1791192854379"></script>
 <script src="assets/js/tekton-data.js?v=1790840790008"></script>
 <script src="assets/js/gravite-data.js?v=1790840790008"></script>
 <script src="assets/js/magnite-data.js?v=1790840790008"></script>
-<script src="assets/js/main.js?v=1790845714359"></script>
+<script src="assets/js/main.js?v=1791192389616"></script>
 </body>
 </html>

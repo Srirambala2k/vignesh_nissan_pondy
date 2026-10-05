@@ -6,18 +6,26 @@
    ===================================================================== */
 window.SITE = {
   dealer: "Vignesh Nissan",
-  whatsapp: "918489944191",            // country code + number, no + or spaces
+  whatsapp: "919787877779",            // sales WhatsApp: country code + number, no + or spaces
+  serviceWhatsapp: "919787044191",     // service WhatsApp
   phones: ["+91 84899 44191", "+91 70944 41991"],
   email: "",                            // enquiry email (optional, shown in footer)
-  address: "#10-A Vignesh Towers, ECR, Near Kokku Park, Puducherry",
-  hours: { mon_sat: [9, 21], sun: [10, 20] },   // 24h clock: open, close
+  address: "10, Vignesh Towers, East Coast Rd, Pakkamudayanpet, Lawspet, Puducherry, 605008",
+  hours: { mon_sat: [9, 21], sun: [10, 20] },   // 24h clock: open, close (Puducherry showroom)
+  // Showrooms shown in the Visit Us section. hours:true shows the Open now badge and timings.
+  locations: [
+    { id: "puducherry", name: "Puducherry", address: "10, Vignesh Towers, East Coast Rd, Pakkamudayanpet, Lawspet, Puducherry, 605008", phones: ["+91 84899 44191", "+91 70944 41991"], hours: true,
+      mapLink: "https://www.google.com/maps/search/?api=1&query=Vignesh%20Nissan%2C%2010%2C%20Vignesh%20Towers%2C%20East%20Coast%20Rd%2C%20Pakkamudayanpet%2C%20Lawspet%2C%20Puducherry%2C%20605008", mapEmbed: "https://maps.google.com/maps?q=Vignesh%20Nissan%2C%2010%2C%20Vignesh%20Towers%2C%20East%20Coast%20Rd%2C%20Pakkamudayanpet%2C%20Lawspet%2C%20Puducherry%2C%20605008&z=16&output=embed" },
+    { id: "villupuram", name: "Villupuram", address: "53/5, Gingee Main Road, Kamalanagar, Villupuram – 605602 (Opposite Sri Jayeandra Saraswati Vidyaalayaa School)", phones: ["+91 84899 44191"], hours: false },
+    { id: "cuddalore", name: "Cuddalore", address: "8, Imperial Rd, Sellankuppam, Cuddalore, Tamil Nadu 607003", phones: ["+91 84899 44191"], hours: false }
+  ],
   instagram: "https://www.instagram.com/vignesh.nissan/",
   facebook: "https://www.facebook.com/VigneshNissan",
   youtube: "https://www.youtube.com/channel/UCFKA8_JgrQNEDb7luTmgn9Q",
   twitter: "https://twitter.com/VigneshMoteurx",
   linkedin: "https://www.linkedin.com/company/69943655",
-  mapLink: "https://www.google.com/maps/place/Vignesh+Nissan/@11.9449526,79.8093858,17z",
-  mapEmbed: "https://maps.google.com/maps?q=11.9449526,79.8093858&z=16&output=embed",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=Vignesh%20Nissan%2C%2010%2C%20Vignesh%20Towers%2C%20East%20Coast%20Rd%2C%20Pakkamudayanpet%2C%20Lawspet%2C%20Puducherry%2C%20605008",
+  mapEmbed: "https://maps.google.com/maps?q=Vignesh%20Nissan%2C%2010%2C%20Vignesh%20Towers%2C%20East%20Coast%20Rd%2C%20Pakkamudayanpet%2C%20Lawspet%2C%20Puducherry%2C%20605008&z=16&output=embed",
   // Optional: free key from web3forms.com so enquiries also arrive by email
   web3formsKey: "",
   popupDelayMs: 3500,
@@ -94,7 +102,7 @@ window.MODELS = [
       { trim: "Acenta",     engine: "1.0L NA (72 PS)", gearbox: "5MT",       price: 659000, features: "Wireless Android Auto & Apple CarPlay, steering-mounted controls, independent rear AC" },
       { trim: "N-Connecta", engine: "1.0L NA (72 PS)", gearbox: "5MT / AMT", price: 720000, features: "Higher-trim comfort and tech, rear camera, LED lighting (AMT from ₹7.80 L)" },
       { trim: "Tekna",      engine: "1.0L NA (72 PS)", gearbox: "5MT / AMT", price: 791000, features: "Top-trim features, digital cluster, push start/stop (AMT from ₹8.49 L)" },
-      { trim: "Tekna LE",   engine: "1.0L NA (72 PS)", gearbox: "5MT / AMT", price: 836000, features: "Limited launch edition of the Tekna (AMT from ₹8.94 L)" }
+      { trim: "Tekna +",    engine: "1.0L NA (72 PS)", gearbox: "5MT / AMT", price: 836000, features: "Limited launch edition of the Tekna (AMT from ₹8.94 L)" }
     ]
   },
   {

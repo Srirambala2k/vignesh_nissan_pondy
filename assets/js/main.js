@@ -22,7 +22,7 @@
   function imgHTML(src, alt) {
     return '<img src="' + esc(src) + '" alt="' + esc(alt) + '" loading="lazy" onerror="this.outerHTML=\'<div class=&quot;ph&quot;>Add image: ' + esc(src.replace("assets/images/", "")) + '</div>\'">';
   }
-  function wa(text) { return "https://wa.me/" + S.whatsapp + "?text=" + encodeURIComponent(text); }
+  function wa(text, num) { return "https://wa.me/" + (num || S.whatsapp) + "?text=" + encodeURIComponent(text); }
   var toast = (function () {
     var el = $("#toast"), t;
     return function (msg) { el.textContent = msg; el.classList.add("on"); clearTimeout(t); t = setTimeout(function () { el.classList.remove("on"); }, 3500); };
@@ -30,15 +30,29 @@
 
   /* ---------- static bindings ---------- */
   $("#yr").textContent = new Date().getFullYear();
-  $("#addr").textContent = S.address;
-  $("#mapFrame").src = S.mapEmbed;
   $("#dkWa").href = wa("Hi Vignesh Nissan, I'd like to know more about your cars.");
   $("#mbWa").href = $("#dkWa").href;
+  var svcWa = $("#svcWa"); if (svcWa) svcWa.href = wa("Hi Vignesh Nissan Service, I'd like to book a service.", S.serviceWhatsapp);
   $("#dkIg").href = S.instagram;
   $("#dkCall").href = "tel:" + S.phones[0].replace(/\s/g, "");
-  $("#visitBtns").innerHTML =
-    '<a class="btn btn-red" target="_blank" rel="noopener" href="' + esc(S.mapLink) + '">Get Directions</a>' +
-    S.phones.map(function (p) { return '<a class="btn btn-ghost" href="tel:' + p.replace(/\s/g, "") + '">' + esc(p) + "</a>"; }).join("");
+  /* showroom locations: tabs switch the address, timings, call buttons, directions and map */
+  var LOCS = (S.locations && S.locations.length) ? S.locations : [{ id: "main", name: "Showroom", address: S.address, phones: S.phones, hours: true, mapLink: S.mapLink, mapEmbed: S.mapEmbed }];
+  var curLoc = 0, mapSet = {};
+  function locQuery(l) { return encodeURIComponent("Vignesh Nissan, " + l.address); }
+  function renderLoc(i) {
+    curLoc = i; var l = LOCS[i];
+    $("#locTabs").innerHTML = LOCS.length > 1 ? LOCS.map(function (x, k) { return '<button class="tab' + (k === i ? " on" : "") + '" role="tab" aria-selected="' + (k === i) + '" data-loc="' + k + '">' + esc(x.name) + "</button>"; }).join("") : "";
+    $("#addr").textContent = l.address;
+    $("#hoursLine").innerHTML = l.hours ? "<b>Hours:</b> Mon–Sat 9 AM – 9 PM · Sun 10 AM – 8 PM" : "<b>Timings:</b> Call us to confirm showroom timings.";
+    $("#openBadge2").hidden = !l.hours;
+    var dir = l.mapLink || ("https://www.google.com/maps/search/?api=1&query=" + locQuery(l));
+    $("#visitBtns").innerHTML = '<a class="btn btn-red" target="_blank" rel="noopener" href="' + esc(dir) + '">Get Directions</a>' +
+      (l.phones && l.phones.length ? l.phones : S.phones).map(function (p) { return '<a class="btn btn-ghost" href="tel:' + p.replace(/s/g, "") + '">' + esc(p) + "</a>"; }).join("");
+    $("#mapFrame").src = l.mapEmbed || ("https://maps.google.com/maps?q=" + locQuery(l) + "&z=16&output=embed");
+    $("#mapFrame").title = "Vignesh Nissan " + l.name + " location";
+  }
+  $("#locTabs").addEventListener("click", function (e) { var t = e.target.closest("[data-loc]"); if (t) renderLoc(+t.dataset.loc); });
+  renderLoc(0);
   /* social icon row: Facebook, YouTube, X/Twitter, LinkedIn, Instagram, Google Maps */
   var ICONS = {
     Facebook: "M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z",
@@ -382,9 +396,9 @@
   // Auto popup on load (once); cancelling keeps it closed until a model is selected.
   setTimeout(function () { if (!autoDone && !modal.classList.contains("on")) { autoDone = true; openModal({}); } }, S.popupDelayMs);
 
-  function sendLead(payload, subject, waText) {
-    var w = window.open(wa(waText), "_blank");           // synchronous: avoids popup blocking
-    if (!w) location.href = wa(waText);
+  function sendLead(payload, subject, waText, num) {
+    var w = window.open(wa(waText, num), "_blank");           // synchronous: avoids popup blocking
+    if (!w) location.href = wa(waText, num);
     if (S.web3formsKey) {
       payload.access_key = S.web3formsKey; payload.subject = subject;
       fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) }).catch(function () {});
@@ -407,7 +421,7 @@
     var n = sf.name.value.trim(), p = sf.phone.value.trim();
     if (n.length < 2 || !validPhone(p)) { toast("Please enter your name and a valid 10-digit mobile."); return; }
     var text = "Hi Vignesh Nissan, I'm " + n + " (" + p + "). Service request: " + sf.type.value + (sf.reg.value ? " for " + sf.reg.value.trim() : "") + ".";
-    sendLead({ name: n, phone: p, vehicle: sf.reg.value, service: sf.type.value }, "Service request", text);
+    sendLead({ name: n, phone: p, vehicle: sf.reg.value, service: sf.type.value }, "Service request", text, S.serviceWhatsapp);
     sf.reset(); toast("Service request sent. We'll confirm your slot.");
   });
 

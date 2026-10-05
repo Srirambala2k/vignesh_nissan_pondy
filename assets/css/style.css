@@ -582,3 +582,8 @@ body{background:var(--bg)}
 .social a.linkedin:hover{background:#0a66c2}.social a.instagram:hover{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}.social a.google:hover{background:var(--red)}
 .social a.soc:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 .follow{margin:18px 0 8px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* showroom location tabs */
+[hidden]{display:none!important}
+.loc-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}
+.loc-tabs .tab{padding:8px 18px;font-size:14px}
