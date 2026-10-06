@@ -10,12 +10,10 @@ window.SITE = {
   serviceWhatsapp: "919787044191",     // service WhatsApp
   phones: ["+91 84899 44191", "+91 70944 41991"],
   email: "",                            // enquiry email (optional, shown in footer)
-  address: "10, Vignesh Towers, East Coast Rd, Pakkamudayanpet, Lawspet, Puducherry, 605008",
+  address: "53/5, Gingee Main Road, Kamalanagar, Villupuram – 605602 (Opposite Sri Jayeandra Saraswati Vidyaalayaa School)",
   hours: { mon_sat: [9, 21], sun: [10, 20] },   // 24h clock: open, close (Puducherry showroom)
-  // Showrooms shown in the Visit Us section. hours:true shows the Open now badge and timings.
+  // Showrooms shown in the Visit Us section. hours:true shows the Open now badge and timings (needs hours below).
   locations: [
-    { id: "puducherry", name: "Puducherry", address: "10, Vignesh Towers, East Coast Rd, Pakkamudayanpet, Lawspet, Puducherry, 605008", phones: ["+91 84899 44191", "+91 70944 41991"], hours: true,
-      mapLink: "https://www.google.com/maps/search/?api=1&query=Vignesh%20Nissan%2C%2010%2C%20Vignesh%20Towers%2C%20East%20Coast%20Rd%2C%20Pakkamudayanpet%2C%20Lawspet%2C%20Puducherry%2C%20605008", mapEmbed: "https://maps.google.com/maps?q=Vignesh%20Nissan%2C%2010%2C%20Vignesh%20Towers%2C%20East%20Coast%20Rd%2C%20Pakkamudayanpet%2C%20Lawspet%2C%20Puducherry%2C%20605008&z=16&output=embed" },
     { id: "villupuram", name: "Villupuram", address: "53/5, Gingee Main Road, Kamalanagar, Villupuram – 605602 (Opposite Sri Jayeandra Saraswati Vidyaalayaa School)", phones: ["+91 84899 44191"], hours: false },
     { id: "cuddalore", name: "Cuddalore", address: "8, Imperial Rd, Sellankuppam, Cuddalore, Tamil Nadu 607003", phones: ["+91 84899 44191"], hours: false }
   ],
@@ -24,8 +22,8 @@ window.SITE = {
   youtube: "https://www.youtube.com/channel/UCFKA8_JgrQNEDb7luTmgn9Q",
   twitter: "https://twitter.com/VigneshMoteurx",
   linkedin: "https://www.linkedin.com/company/69943655",
-  mapLink: "https://www.google.com/maps/search/?api=1&query=Vignesh%20Nissan%2C%2010%2C%20Vignesh%20Towers%2C%20East%20Coast%20Rd%2C%20Pakkamudayanpet%2C%20Lawspet%2C%20Puducherry%2C%20605008",
-  mapEmbed: "https://maps.google.com/maps?q=Vignesh%20Nissan%2C%2010%2C%20Vignesh%20Towers%2C%20East%20Coast%20Rd%2C%20Pakkamudayanpet%2C%20Lawspet%2C%20Puducherry%2C%20605008&z=16&output=embed",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=Vignesh%20Nissan%2C%2053%2F5%2C%20Gingee%20Main%20Road%2C%20Kamalanagar%2C%20Villupuram%20%E2%80%93%20605602%20(Opposite%20Sri%20Jayeandra%20Saraswati%20Vidyaalayaa%20School)",
+  mapEmbed: "https://maps.google.com/maps?q=Vignesh%20Nissan%2C%2053%2F5%2C%20Gingee%20Main%20Road%2C%20Kamalanagar%2C%20Villupuram%20%E2%80%93%20605602%20(Opposite%20Sri%20Jayeandra%20Saraswati%20Vidyaalayaa%20School)&z=16&output=embed",
   // Optional: free key from web3forms.com so enquiries also arrive by email
   web3formsKey: "",
   popupDelayMs: 3500,

@@ -70,6 +70,8 @@
 
   /* ---------- open now badge (IST) ---------- */
   function updateOpen() {
+    // the Open now badge only makes sense for a showroom whose hours we know
+    if (!LOCS.some(function (l) { return l.hours; })) { $$("#openBadge,#openBadge2").forEach(function (b) { b.hidden = true; }); return; }
     var p = new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Kolkata", weekday: "short", hour: "numeric", hour12: false }).formatToParts(new Date());
     var day = p.filter(function (x) { return x.type === "weekday"; })[0].value;
     var h = parseInt(p.filter(function (x) { return x.type === "hour"; })[0].value, 10) % 24;

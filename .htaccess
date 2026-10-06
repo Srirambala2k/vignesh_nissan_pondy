@@ -1,0 +1,22 @@
+# Vignesh Nissan: Hostinger (Apache / LiteSpeed)
+# HTTPS is forced by Hostinger (Security > SSL > Force HTTPS), so it is not repeated here.
+
+RewriteEngine On
+
+# Old website pages -> new home page (keeps old Google links and bookmarks working)
+RewriteRule ^(index|about|car-specification|contact|datsun|nissan|service|social|terms)\.php$ / [L,R=301]
+RewriteRule ^team\.html$ / [L,R=301]
+
+# Browser caching for images, video, CSS and JS
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/avif "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+  ExpiresByType video/webm "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
